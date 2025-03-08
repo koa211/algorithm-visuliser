@@ -1,6 +1,6 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
-import BruteforcePage from './pages/BruteForce';
+import SearchPage from './pages/searchPage.jsx';
 
 function HomePage() {
     return (
@@ -9,8 +9,8 @@ function HomePage() {
 
             {/* Navigation */}
             <nav>
-                <Link to="/bruteforce">
-                    <button>Bruteforce Algorithm</button>
+                <Link to="/search">
+                    <button>Searching Algorithms</button>
                 </Link>
             </nav>
         </div>
@@ -23,8 +23,8 @@ function App() {
             {/* Home Page Route */}
             <Route path="/" element={<HomePage />} />
 
-            {/* Bruteforce Algorithm Page Route */}
-            <Route path="/bruteforce" element={<BruteforcePage />} />
+            {/* Searching Algorithm Page Route */}
+            <Route path="/search" element={<SearchPage />} />
         </Routes>
     );
 }
