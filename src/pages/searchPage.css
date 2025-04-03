@@ -53,3 +53,69 @@
     font-size: 16px;
     color: #555;
 }
+
+.array-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.array-box {
+    width: 50px;
+    height: 50px;
+    background-color: #e0e0e0;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.array-box.highlight {
+    background-color: #ffc107;
+}
+
+.array-box.found {
+    background-color: #4caf50;
+    color: white;
+}
+
+.play-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.play-button:hover {
+    background-color: #0056b3;
+}
+
+.reset-button {
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.reset-button:hover {
+    background-color: #5a6268;
+}
+
+
