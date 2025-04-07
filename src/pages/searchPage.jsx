@@ -46,7 +46,8 @@ function SearchPage() {
                     <h2>Linear Search</h2>
                     <p>
                         Linear Search is a simple searching algorithm that checks each element one by one
-                        until the target value is found or the list ends.
+                        until the target value is found or the list ends. In this example, we are searching
+                        for the value <strong>21</strong> in the array <code>[5, 12, 8, 21, 30]</code>.
                     </p>
 
                     {/* Visual array */}
