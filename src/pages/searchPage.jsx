@@ -117,9 +117,22 @@ function SearchPage() {
                 <div className="algorithm-card">
                     <h2>Linear Search</h2>
                     <p>
-                        Linear Search is a simple searching algorithm that checks each element one by one
-                        until the target value is found or the list ends. In this example, we are searching
-                        for the value <strong>21</strong> in the array <code>[5, 12, 8, 21, 30]</code>.
+                        Linear Search is a simple searching algorithm that checks each element in an array sequentially
+                        until
+                        the target value is found or the end of the array is reached. It is useful for small or unsorted
+                        datasets.
+                        <br/><br/>
+                        In this example, we are searching for the value <strong>21</strong> in the array <code>[5, 12,
+                        8, 21, 30]</code>.
+                        <br/><br/>
+                        <strong>How it works:</strong> Start at index 0, and move one-by-one to the next index
+                        comparing each element to the target.
+                        <br/>
+                        <strong>Time Complexity:</strong>
+                        - Best Case: O(1) (first element)
+                        - Average/Worst Case: O(n)
+                        <br/>
+                        This algorithm doesn’t require sorting but becomes inefficient as array size grows.
                     </p>
 
                     {/* Visual array */}
@@ -138,7 +151,7 @@ function SearchPage() {
 
                     {/* Play Button */}
                     <button className="play-button" onClick={handlePlay}>
-                        ▶ Play
+                    ▶ Play
                     </button>
                     <button className="reset-button" onClick={handleReset}>
                         🔄 Reset
@@ -148,10 +161,24 @@ function SearchPage() {
                 <div className="algorithm-card">
                     <h2>Binary Search</h2>
                     <p>
-                        Binary Search works by repeatedly dividing the search interval in half. In this example, we are
-                        searching
-                        for the value <strong>14</strong> in the sorted array <code>[2, 4, 6, 8, 10, 12, 14, 16]</code>.
+                        Binary Search is a powerful algorithm used on sorted arrays. It repeatedly divides the array into halves
+                        to narrow down the search range until the target value is found or the range is empty.
+                        <br /><br />
+                        In this example, we are searching for the value <strong>14</strong> in the sorted array <code>[2, 4, 6, 8, 10, 12, 14, 16]</code>.
+                        <br /><br />
+                        <strong>How it works:</strong>
+                        - Calculate the middle index: <code>mid = Math.floor((low + high) / 2)</code>
+                        - Compare the middle value to the target
+                        - If it’s less, search the right half; if more, search the left half
+                        - Repeat until found or bounds cross
+                        <br />
+                        <strong>Time Complexity:</strong>
+                        - Best Case: O(1)
+                        - Average/Worst Case: O(log n)
+                        <br />
+                        Much more efficient than Linear Search for large, sorted datasets.
                     </p>
+
 
                     {/* Visual array */}
                     <div className="array-container">
@@ -175,10 +202,25 @@ function SearchPage() {
                 <div className="algorithm-card">
                     <h2>Jump Search</h2>
                     <p>
-                        Jump Search works by jumping ahead fixed steps in a sorted array and then performing
-                        a linear search within a block. In this example, we are searching
-                        for <strong>{jumpTarget}</strong> in the array <code>[1, 3, 5, 7, 9, 11, 13, 15]</code>.
+                        Jump Search combines the speed of Binary Search with the simplicity of Linear Search. It is used on sorted arrays
+                        and works by jumping ahead in fixed intervals (blocks), then performing a linear search within that block.
+                        <br /><br />
+                        In this example, we are searching for the value <strong>11</strong> in the sorted array <code>[1, 3, 5, 7, 9, 11, 13, 15]</code>.
+                        <br /><br />
+                        <strong>How it works:</strong>
+                        - Determine a jump step size, usually √n
+                        - Jump ahead in blocks: index 0 → 3 → 6... until overshooting or reaching the block containing the target
+                        - Do a linear scan within that block
+                        <br />
+                        For this array, jump step = <code>Math.floor(√8) = 2</code>
+                        <br />
+                        <strong>Time Complexity:</strong>
+                        - Best Case: O(1)
+                        - Average/Worst Case: O(√n)
+                        <br />
+                        Useful when random access is cheap (like in arrays) and binary search isn’t optimal for all values.
                     </p>
+
 
                     <div className="array-container">
                         {jumpArray.map((value, index) => (
