@@ -118,5 +118,88 @@
     background-color: #5a6268;
 }
 
+.bst-visualizer {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.bst-node {
+    width: 50px;
+    height: 50px;
+    background-color: #dee2e6;
+    color: #333;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 16px;
+}
+
+.bst-node.visited {
+    background-color: #ffc107; /* Yellow */
+}
+
+.bst-node.current {
+    background-color: #17a2b8; /* Teal */
+    color: white;
+}
+
+.bst-node.found {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+.tree-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tree-node-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.tree-children {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between siblings */
+    margin-top: 20px;
+}
+
+.tree-node {
+    width: 50px;
+    height: 50px;
+    background-color: #dee2e6;
+    color: #333;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tree-node.visited {
+    background-color: #ffc107;
+}
+
+.tree-node.current {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.tree-node.found {
+    background-color: #28a745;
+    color: white;
+}
+
+
 
 
